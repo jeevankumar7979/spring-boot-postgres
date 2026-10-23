@@ -38,5 +38,6 @@ public class AuthorController {
     public ResponseEntity<Optional<Author>> getAuthorById(@PathVariable Integer id) {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(repository.findById(id));
+
     }
 }
