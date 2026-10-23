@@ -35,9 +35,8 @@ public class AuthorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Author>> getAuthorById(@PathVariable Integer id) {
+    public ResponseEntity<Optional<Author>> getAuthorById(@PathVariable(value = "id") Integer id) {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(repository.findById(id));
-
     }
 }
